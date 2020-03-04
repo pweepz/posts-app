@@ -1,0 +1,16 @@
+<div class="container">
+  <mat-form-field class="example-full-width" floatLabel="never">
+    <mat-label>Filter by title</mat-label>
+    <input matInput [(ngModel)]="filterTerm" placeholder="Enter title" type="search">
+  </mat-form-field>
+  <mat-card *ngFor="let post of postItems">
+    <mat-card-content >
+      <h3><a routerLink="{{ post?.id }}">{{ post?.title }}</a></h3>
+      <p>
+        {{ post?.text }}
+      </p>
+    </mat-card-content>
+    <app-post-comments [commentsData]="getPostComments(post?.id)"></app-post-comments>
+  </mat-card>
+</div>
+

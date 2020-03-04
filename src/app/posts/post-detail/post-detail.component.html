@@ -1,0 +1,12 @@
+<div class="container">
+  <mat-card>
+    <mat-card-content >
+      <h3>{{post?.title}}</h3>
+      <p>
+        {{post?.text}}
+      </p>
+    </mat-card-content>
+    <app-post-comments [commentsData]="postComments"></app-post-comments>
+  </mat-card>
+</div>
+

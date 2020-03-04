@@ -1,0 +1,12 @@
+<mat-accordion>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Comments
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <div class="comment" *ngFor="let comment of commentsData">
+      {{comment?.body}}
+    </div>
+  </mat-expansion-panel>
+</mat-accordion>
